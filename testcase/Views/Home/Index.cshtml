@@ -1,0 +1,127 @@
+@{
+    ViewData["Title"] = "Enter Prime Number";
+    string isAdminChecker = Context.Request.Cookies["isAdmin"];
+}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Find The Largest Prime Number</title>
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/theme-style.css">
+   </head>
+   <body>
+      <header class="header-style2 fixed-top">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                 <span style="float: left">TestCase</span>
+                  <span>
+                        <a href="/Login/Index" style="font-size: 19px; color: #45c3d3; font-weight: bold;">Login as Admin</a>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section class="booking-details center-block main-block">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                   <br />
+                    <h2>Find Largest Prime Number</h2>
+                    <h6>The method that finds the largest number of prime numbers entered sequentially.</h6>
+               </div>
+            </div>
+            <div class="row mt-5">
+               <div class="col-md-8 set-sm-fit mb-4">
+                    <form action="@Url.Action("StorePrimeNumber", "Home")" method="post">
+                     <div class="preference-title">
+                        <h4>Prime Number</h4>
+                     </div>
+                     <div class="preferences">
+                       
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="preference-about_home">
+                                        <h4>Enter Prime Number </h4>
+                                        @if (TempData["SuccessMessage"] != null)
+                                        {
+                                            <div class="payment-icon">
+                                                <p class="text-success">@TempData["SuccessMessage"]</p>
+                                            </div>
+                                        }
+
+                                        @if (TempData["ErrorMessage"] != null)
+                                        {
+                                            <div class="payment-icon">
+                                                <p class="text-danger">@TempData["ErrorMessage"]</p>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preference-radio mt-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card-details">
+                                            <input type="number" name="number" placeholder="Number" class="card-number card-num">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preference-radio mt-5">
+                                <div class="row mt-4">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-block complete-booking" type="submit">Save Prime Number</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-4 set-sm-fit">
+                  <div data-toggle="affix">
+                     <div class="preference-title">
+                        <h4>Last 5 Prime Numbers</h4>
+                     </div>
+
+                    @if (isAdminChecker != null && isAdminChecker != "403")
+                    {
+                        <div class="fesilities">
+                            <ul>
+                                @foreach (var primeNumber in Model)
+                                {
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+<<<<<<< HEAD
+                                        <li>
+                                            <b>@primeNumber.Username</b> <span style="float: right">Girilen sayı: @primeNumber.Number</span>
+                                           </li>
+                                           <hr />
+=======
+                                    <li>@primeNumber.number</li>
+>>>>>>> origin/master
+                                }
+                            </ul>
+                            <h4>Maximum <span>@TempData["LargestPrimeNumber"]</span></h4>
+                        </div>
+                    } else
+                    {
+                        <div class="fesilities">
+                                <div style="text-align: center;">
+                                    <p style="font-size: 30px; margin-top: 50px; margin-bottom: 0px; color: #4f4f4f; font-weight: bold;">Access Denied</p>
+                                    <img src="/images/ad.png" width="100%" />
+                                </div>
+                            <h4>Login as Admin</h4>
+                        </div>
+                    }
+
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
+</html>
