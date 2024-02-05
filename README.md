@@ -10,7 +10,7 @@ Solid prensiplerinin ilki olan *Single Responsibility Principle* design pattern'
 
 Unit of Work tasarımı, veritabanı işlemlerini gruplamak ve tek bir işlem içinde yönetmek amacıyla kullanılır. Bu tasarım, aynı işlemlerin birbirine bağımlılıklarını yönetir ve işlemlerin başarılı bir şekilde tamamlanmasını sağlar. Diğer yandan, servis tabanlı tasarım daha modüler ve bağımsız bir yaklaşım sunar, her servis belirli bir işlevselliğe odaklanır ve birim testlerle daha iyi uyum sağlar. Unit of Work, veritabanı işlemleri üzerine odaklanırken, servis tabanlı tasarım genel uygulama mantığına odaklanır ve daha esnek bir yapı sunar.
 
-#### Prime Number Service Tasarımı
+### Prime Number Service Tasarımı
 
 Projede kullandığım sayı işlemleri için Prime Number adında ayrı bir servis geliştirdim. Bunu ayrı bir servis içinde organize etmek, kodun modülerliğini artırarak bakımını kolaylaştırır. Bu yaklaşım, her bir servisin belirli bir sorumluluğa odaklanmasını sağlar ve bu sayede kod daha okunabilir hale gelir. Ayrıca, bu sayı işlemlerinin bağımsız bir şekilde test edilmesi, yazılımın güvenilirliğini artırır. Servis tabanlı yapı, projenin büyümesi ve gelişmesi durumunda daha esnek bir yapı sunar. Sonuç olarak, bu yaklaşım, kodun daha sürdürülebilir ve genişletilebilir olmasına katkı sağlar.
 
