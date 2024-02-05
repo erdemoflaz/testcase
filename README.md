@@ -1,9 +1,14 @@
 # Asal Sayı Bulucu
 
-![Nasıl görünüyor?](testcase.mp4)
-
-
 Bu .NET Core uygulaması, en büyük asal sayıyı bulmak amacıyla geliştirilmiştir. Sadece admin yetkisi olan kullanıcılar, asal sayıları girebilir ve işlemleri gerçekleştirebilir. Veritabanı, DB first yaklaşımı kullanılarak oluşturulmalıdır.
+
+## Service Yapısı ve Design Patterns
+
+Solid prensiplerinin ilki olan *Single Responsibility Principle* design pattern'i olan servis tabanlı tasarım, her servisin belirli bir sorumluluğa odaklanmasını sağlayarak kodun okunabilirliğini artırır ve geliştirilmesini kolaylaştırır. Bu modüler yaklaşım, her bir servisin bağımsız olarak test edilebilmesini mümkün kılar, bu da yazılımın güvenilirliğini artırır. Tek sorumluluk ilkesini destekleyen servis tabanlı tasarım, her bir servisin sadece belirli bir işlevselliği yönetmesini sağlayarak kodun karmaşıklığını azaltır ve daha etkili bir geliştirme süreci sunar.
+
+### UnitOfWork ve Benzer Tasarım Methodları
+
+Unit of Work tasarımı, veritabanı işlemlerini gruplamak ve tek bir işlem içinde yönetmek amacıyla kullanılır. Bu tasarım, aynı işlemlerin birbirine bağımlılıklarını yönetir ve işlemlerin başarılı bir şekilde tamamlanmasını sağlar. Diğer yandan, servis tabanlı tasarım daha modüler ve bağımsız bir yaklaşım sunar, her servis belirli bir işlevselliğe odaklanır ve birim testlerle daha iyi uyum sağlar. Unit of Work, veritabanı işlemleri üzerine odaklanırken, servis tabanlı tasarım genel uygulama mantığına odaklanır ve daha esnek bir yapı sunar.
 
 ## Kullanıcılar (User) Tablosu
 
