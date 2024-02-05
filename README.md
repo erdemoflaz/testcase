@@ -45,7 +45,7 @@ Uygulamanın kullanılabilmesi için veritabanının oluşturulması gerekmekted
 
 ## Nasıl Çalışır?
 
-Uygulama, kullanıcının belirlediği bir aralıkta en büyük asal sayıyı bulmak için tasarlanmıştır. Sadece admin yetkisine sahip kullanıcılar, asal sayıları girebilir ve bu işlemi gerçekleştirebilir.
+Uygulama, web arayüzünden girilen en büyük asal sayıyı bulmak için tasarlanmıştır. Girilen ve en büyük olan asal sayının sadece admin yetkisine sahip kullanıcıların gördüğü, bunun yanında tüm kullanıcıların asal sayı girişinde bulunabildiği bu işlem ile admin rolündeki kullanıcıların maksimum asal sayıyı hesaplamasına olanak sağlar.
 
 ## Kullanım
 
